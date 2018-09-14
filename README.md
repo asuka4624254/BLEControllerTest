@@ -2,7 +2,7 @@
 
 Bluetooth 接続用のプラグインを Swift で書いて、Objective-C 経由で Unity と連携できるようにしたサンプルです
 
-2台のiOS端末間で無線通信をして、片方の端末の操作によってもう片方のキューブが左右に動きます
+2台のiOS端末間で無線通信をして、片方の端末の操作によってもう片方のキューブが左右に動きます
 
 - Bluetooth 接続周りは Core Bluetooth を使用し、Swift4 で書いています
 - Unity（C#）から直接 Swift のコードを呼び出すことができないため、間に Objective-C のコードを挟んで呼び出しています
@@ -11,9 +11,9 @@ Bluetooth 接続用のプラグインを Swift で書いて、Objective-C 経由
 ## このサンプルアプリの使い方
 
 1. iOS端末を2台用意します
-1. このリポジトリを clone し、Unity で iOS 用にビルド、同じアプリを2台にインストールします
-1. 片方の端末で「Display」ボタンをタップ、もう片方で「Controller」をタップ
-1. コントローラ側の「Left」と「Right」ボタンのタップ操作によって、ディスプレイ側の中央に表示されているキューブが左右に移動します
+1. このリポジトリを clone し、Unity で iOS 用にビルド、同じアプリを2台にインストールします
+1. 片方の端末で「Display」ボタンをタップ、もう片方で「Controller」をタップ
+1. コントローラ側の「Left」と「Right」ボタンのタップ操作によって、ディスプレイ側の中央に表示されているキューブが左右に移動します
 
 ### メイン画面
 ![メイン](IMG_7055.PNG)
@@ -34,7 +34,7 @@ Bluetooth 接続用のプラグインを Swift で書いて、Objective-C 経由
 1. `Unity -> Build Settings` で `iOS` を選んで `Build And Run`
 1. 生成された Xcode のプロジェクトを開く（勝手に開くと思う）
 1. 実機をつないでビルドしながら、以下のトラブルシューティングを参考に各種設定を行う
-1. 2台の端末の両方にアプリをインストールし、動作確認
+1. 2台の端末の両方にアプリをインストールし、動作確認
 
 
 ## トラブルシューティング
@@ -115,7 +115,7 @@ Value : For Bluetooth Connection（任意の文言を設定、使用目的を書
 /path/to/project/BLEControllerTest/Builds/iOS/Libraries/Plugins/iOS/BridgeForCallingSwiftMethodFromCSharp.mm:19:35: No visible @interface for 'BluetoothCentral' declares the selector 'connect'
 ```
 Swift のメソッドの定義が、上手く `ProductName-Swift.h` 内に自動生成されないために起こるエラー  
-`ProductName-Swift.h` に書き出したい Swift のメソッドに `@objc` を付ける（`BluetoothCentral.swift` のコードを参照）
+`ProductName-Swift.h` に書き出したい Swift のメソッドに `@objc` を付ける（`BluetoothCentral.swift` のコードを参照）
 
 ### 上手く ProductName-Swift.h に定義が書き出されないときは
 Xcode のメニューの `Product -> Clean` を実行すると `ProductName-Swift.h` は削除され、`Product -> Build` を行うと再生成される  
