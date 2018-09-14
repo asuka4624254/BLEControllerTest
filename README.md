@@ -33,6 +33,7 @@ Bluetooth 接続用のプラグインを Swift で書いて、Objective-C 経由
 ## ビルド方法
 1. `Unity -> Build Settings` で `iOS` を選んで `Build And Run`
 1. 生成された Xcode のプロジェクトを開く（勝手に開くと思う）
+1. `Bundle Identifier` と `Signing` を設定
 1. 実機をつないでビルドしながら、以下のトラブルシューティングを参考に各種設定を行う
 1. 2台の端末の両方にアプリをインストールし、動作確認
 
